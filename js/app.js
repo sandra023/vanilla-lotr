@@ -168,7 +168,7 @@ function makeBuddies () {
 
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
-  const theHobbits = document.createElement('ul')
+  //const theHobbits = document.createElement('ul')
 
   document.querySelector('#Rivendell').appendChild(document.querySelector('ul'))
 
@@ -184,11 +184,11 @@ function leaveTheShire() {
 // ============
 
 function beautifulStranger() { 
-  console.log("7: beautifulStranger");
-document.querySelector
-  // change the `'Strider'` text to `'Aragorn'`
-}
+ console.log("7: beautifulStranger");
 
+const king = document.getElementsByTagName('li')[3];
+king.innerHTML = "Aragon"}
+ // li.childNodes[3]
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -199,13 +199,38 @@ document.querySelector
 
 function forgeTheFellowShip() { 
   console.log("8: forgeTheFellowShip");
+
+const div = document.createElement('div')
+div.id= "the-fellowship";
+document.querySelector('#Rivendell').appendChild(div);
+const theGroup = document.createElement('ul')
+div.appendChild(theGroup)
+for (i=0; i< 3; i++){
+alert(document.querySelector('li').innerText+" has joined The Fellowship.")
+theGroup.appendChild(document.querySelector('li'))
+alert(document.querySelector('.hobbit').innerText + " has joined The Fellowship.")
+theGroup.appendChild(document.querySelector('.hobbit'))
+alert(document.querySelector('li').innerText+" has joined The Fellowship.")
+theGroup.appendChild(document.querySelector('li'))
+
+// const rivendell = document.querySelector('#Rivendell')
+// for (i = 0; i < li.length; i++){
+// document.getElementById('#the-fellowship').appendChild('li')
+// alert(`${li[i]} has joined the fellowship`);
+}
+
+
+
+
+
+
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
   // after each character is added make an alert that they // have joined your party
   
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
 
+}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
@@ -216,6 +241,8 @@ function forgeTheFellowShip() {
 
 function theBalrog() { 
   console.log("9: theBalrog");
+  const wizard = document.querySelector('li');
+  wizard.innerHTML = "Gandalf the White"
    // change the `'Gandalf'` text to `'Gandalf the White'`
    // apply the following style to the element, make the // background 'white', add a grey border
 }
@@ -230,6 +257,8 @@ function theBalrog() {
 
 function hornOfGondor() { 
   console.log("10: hornOfGondor");
+  alert("The horn of Gondor has been blown")
+  alert("Boromir has been killed by the Uruk-hai")
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
