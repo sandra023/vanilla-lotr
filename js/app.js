@@ -76,16 +76,16 @@ function makeHobbits() {
 
   // display an `unordered list` of hobbits in the shire
   const hobbitList = document.createElement('ul')
-  document.querySelector('#The-Shire').appendChild(hobbitList)
+ document.querySelector('#The-Shire').appendChild(hobbitList)
   
   // give each hobbit a class of `hobbit`
-  for (let i = 0; i < hobbits.length;i++){
+  for (let i = 0; i < hobbits.length; i++){
     const li = document.createElement('li');
     li.className = "hobbit";
     li.innerText = hobbits[i]
     hobbitList.appendChild(li);
   } 
-  document.querySelector('#The-Shire').appendChild(hobbitList)
+  //document.querySelector('#The-Shire').appendChild(hobbitList)
 }
 
 // COMMIT YOUR WORK
@@ -120,9 +120,15 @@ function makeBaddies() {
   console.log("4: makeBaddies");
 
   // display an unordered list of baddies in Mordor
-
+const baddiesList = document.createElement('ul');
+document.querySelector('#Mordor').appendChild(baddiesList)
   // give each of the baddies a class of "baddy"
-
+  for(i=0; i < baddies.length; i++){
+    const li = document.createElement('li')
+    li.className = "baddy";
+    li.innerText = baddies[i];
+    baddiesList.appendChild(li);
+  }
   // remember to append them to Mordor
 
 }
@@ -139,16 +145,22 @@ function makeBuddies () {
   console.log("5: makeBuddies");
 
   // create an `aside` tag
-   
+   const aside = document.createElement('aside')
   // put an `unordered list` of the `'buddies'` in the aside
-   
+   const buddiesList = document.createElement('ul')
+   aside.appendChild(buddiesList)
+   for (i =0; i<buddies.length; i++){
+     const li = document.createElement('li');
+     li.innerText = buddies[i]
+     buddiesList.appendChild(li)
+   }
   // insert your aside as a child element of `rivendell`
+  document.querySelector('#Rivendell').appendChild(aside)
 
 }
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
-
 
 // ============
 // Chapter 6
