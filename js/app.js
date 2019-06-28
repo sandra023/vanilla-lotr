@@ -168,7 +168,8 @@ function makeBuddies () {
 
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
-  //const theHobbits = document.createElement('ul')
+
+
 
   document.querySelector('#Rivendell').appendChild(document.querySelector('ul'))
 
@@ -206,11 +207,11 @@ document.querySelector('#Rivendell').appendChild(div);
 const theGroup = document.createElement('ul')
 div.appendChild(theGroup)
 for (i=0; i< 3; i++){
-alert(document.querySelector('li').innerText+" has joined The Fellowship.")
+//alert(document.querySelector('li').innerText+" has joined The Fellowship.")
 theGroup.appendChild(document.querySelector('li'))
-alert(document.querySelector('.hobbit').innerText + " has joined The Fellowship.")
+//alert(document.querySelector('.hobbit').innerText + " has joined The Fellowship.")
 theGroup.appendChild(document.querySelector('.hobbit'))
-alert(document.querySelector('li').innerText+" has joined The Fellowship.")
+//alert(document.querySelector('li').innerText+" has joined The Fellowship.")
 theGroup.appendChild(document.querySelector('li'))
 
 // const rivendell = document.querySelector('#Rivendell')
@@ -218,7 +219,6 @@ theGroup.appendChild(document.querySelector('li'))
 // document.getElementById('#the-fellowship').appendChild('li')
 // alert(`${li[i]} has joined the fellowship`);
 }
-
 
 
 
@@ -243,6 +243,10 @@ function theBalrog() {
   console.log("9: theBalrog");
   const wizard = document.querySelector('li');
   wizard.innerHTML = "Gandalf the White"
+  wizard.setAttribute("style", "background-color: white;")
+  wizard.style.border = "thick solid grey";
+  wizard.style.textAlign = "center";
+
    // change the `'Gandalf'` text to `'Gandalf the White'`
    // apply the following style to the element, make the // background 'white', add a grey border
 }
@@ -259,11 +263,13 @@ function hornOfGondor() {
   console.log("10: hornOfGondor");
   alert("The horn of Gondor has been blown")
   alert("Boromir has been killed by the Uruk-hai")
+const parent = document.getElementsByTagName('ul')[2]
+const child = document.getElementsByTagName('li')[6];
+parent.removeChild(child);
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
@@ -276,6 +282,14 @@ function itsDangerousToGoAlone() {
   console.log("11: itsDangerousToGoAlone");
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
+const div = document.createElement('div')
+div.id = "mount-doom"
+document.querySelector('#Mordor').appendChild(div)
+const frodosGroup = document.createElement('ul')
+div.appendChild(frodosGroup)
+  for (i=0; i<2; i++)
+frodosGroup.appendChild(document.querySelector('.hobbit'))
+
 }
 
 
@@ -292,6 +306,11 @@ function weWantsIt() {
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
+  const div = document.createElement('div')
+  div.id = "gollum"
+  document.getElementById('Mordor').appendChild(div)
+  div.apppendchild(documentquerySelector('#the-ring'))  
+  document.querySelector('#mount-doom').appendChild(div)
 }
 
 
