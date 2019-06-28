@@ -168,9 +168,12 @@ function makeBuddies () {
 
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
+  const theHobbits = document.createElement('ul')
 
-  // assemble the `hobbits` and move them to `rivendell`
-}
+  document.querySelector('#Rivendell').appendChild(document.querySelector('ul'))
+
+// assemble the `hobbits` and move them to `rivendell`
+} 
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -182,7 +185,7 @@ function leaveTheShire() {
 
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
-
+document.querySelector
   // change the `'Strider'` text to `'Aragorn'`
 }
 
